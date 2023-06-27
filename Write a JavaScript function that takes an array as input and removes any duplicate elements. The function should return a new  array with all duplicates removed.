@@ -1,0 +1,19 @@
+function removeDuplicates(arr){
+    
+    let unique_Array = [];
+    
+    for (i = 0; i < arr.length; i++) {
+        if (unique_Array.indexOf(arr[i]) === -1) {
+            unique_Array.push(arr[i]);
+        }
+    }
+    console.log(unique_Array);
+}
+const array = [];
+var size = prompt('Enter number of elements:'); 
+for(var a=0; a<size; a++) 
+{   
+    array[a] = prompt('Enter array Element' + (a+1) + ':');
+} 
+
+removeDuplicates(array);
