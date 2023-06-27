@@ -1,0 +1,9 @@
+temp_list=[]
+n= int(input("Enter the number of elements:"))
+for i in range(n):
+    temp_list.append((input("value ")))
+print(temp_list)
+if all(isinstance(val, int) for val in temp_list):
+    print('All elements in the list are integers')
+else:
+    print('All elements in the list are not integers')
