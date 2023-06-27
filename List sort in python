@@ -7,3 +7,13 @@ if all(isinstance(val, int) for val in temp_list):
     print('All elements in the list are integers')
 else:
     print('All elements in the list are not integers')
+-----------------------------------------------------
+using try catch
+number = input("Enter a value : ")
+
+try:
+    temp = int(number)
+except ValueError:
+    print("It is not a number")
+else:
+    print("It is a number")
