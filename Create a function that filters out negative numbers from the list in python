@@ -1,0 +1,11 @@
+temp_list=[]
+n= int(input("Enter the number of elements:"))
+for i in range(n):
+    temp_list.append(int(input("value ")))
+print("Your list=")
+while i > 0: 
+    if temp_list[i] < 0: 
+        del temp_list[i] 
+    i = i - 1 
+print(temp_list) 
+
