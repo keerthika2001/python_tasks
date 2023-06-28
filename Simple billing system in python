@@ -1,0 +1,42 @@
+item_price={'apple':30,'orange':20,'banana':40,'kiwi':20,'mango':100}
+ordered_item=[] #the items we choose
+item={1:'apple',2:'orange',3:'banana',4:'kiwi',5:'mango'}
+i=0  #total elements ordered
+print('===List of items===')
+print('1.apple-Rs.30')
+print('2.orange-Rs.20')
+print('3.banana-Rs.40')
+print('4.kiwi-Rs.20')
+print('5.mango-rs.100')    
+print('6.Exit')   
+print('Enter your choice 1 to 5 for purchase 6 for exit')
+item_num=int(input()) #get item number input
+while((item_num>=1)and(item_num<=5)):  
+    i=i+1
+    print('How many items required:')
+    quantity=int(input())
+    t1=item[item_num] #extracts item name
+    t2=item_price[t1] #extracts price of item
+    item_cost=quantity*t2
+    ordered_item = ordered_item+[item[item_num],item_price[t1],quantity,item_cost]
+    print('===List of items===')
+    print('1.apple-Rs.30')
+    print('2.orange-Rs.20')
+    print('3.banana-Rs.40')
+    print('4.kiwi-Rs.20')
+    print('5.mango-rs.100')    
+    print('6.Exit')
+    print('Enter your choice 1 to 5 for purchase 6 to exit')
+    item_num=int(input())
+print('Retail Bill System')
+print('------------------------------------')
+print('Name \t Price \t Quantity \t Total')
+print('------------------------------------')
+cumulative_amt=0 #cumulative total of all items
+ind=0
+for x in range(i):
+    print("%s\t%0.2f\t\t%d\t\t%0.2f" %(ordered_item[ind],ordered_item[ind+1],ordered_item[ind+2],ordered_item[ind+3]))
+    cumulative_amt=cumulative_amt+ordered_item[ind+3]
+    ind=ind+4
+print('--------------------------------------------')
+print('Total Amount %0.2f'%cumulative_amt)
