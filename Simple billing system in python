@@ -40,3 +40,4 @@ for x in range(i):
     ind=ind+4
 print('--------------------------------------------')
 print('Total Amount %0.2f'%cumulative_amt)
+print('--------------------------------------------')
