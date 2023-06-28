@@ -1,6 +1,6 @@
 item_price={'apple':30,'orange':20,'banana':40,'kiwi':20,'mango':100}
-ordered_item=[] #the items we choose
 item={1:'apple',2:'orange',3:'banana',4:'kiwi',5:'mango'}
+ordered_item=[] #the items we choose
 i=0  #total elements ordered
 print('===List of items===')
 print('1.apple-Rs.30')
