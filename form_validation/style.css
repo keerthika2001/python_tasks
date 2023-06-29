@@ -1,0 +1,11 @@
+
+.input-group .error{
+    color:red;
+    font-size:16px;
+    margin-top: 5px;
+    animation: forwards;
+}
+
+.input-group.error input{
+    border-color:red
+}
