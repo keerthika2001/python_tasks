@@ -1,0 +1,36 @@
+import random 
+
+level = 1
+
+points_list= [100,75,50,25,10]
+
+points = 0
+
+while level <= 3:
+  
+    end_value = level * 10
+ 
+    secret_num =random.randint(1,end_value)
+   
+    for i in range(0,5):
+      
+        guess_num = int(input("Guess the secret number between 1 and {} ({} attempts left):".format(end_value,5-i)))
+      
+        if secret_num == guess_num:
+            print("Your Guess is Correct, You Won the level {} with {} points".format(level,points_list[i]))
+            points += points_list[i]
+            level = level + 1
+            break
+            
+        elif guess_num < secret_num:
+            print("Your Guess is lower than secret number")
+            
+        elif guess_num > secret_num:
+            print("Your Guess is higher than secret number")
+            
+    else:
+        print("Game Over !! You Lost the Game, secret number is {}.Your final score is {}".format(secret_num,points))
+        break
+        
+else:
+    print("Congratulations, You Won the Game with {} points!!!".format(points)) 
